@@ -16,6 +16,7 @@ body {
 
 h1{
     text-align: center;
+    font-size: 3em;
 }
 
 .todo-container {
@@ -42,6 +43,11 @@ li div {
     margin: 0.3em 0;
     border: 1px solid #333;
     border-radius: 0.5em;
+    transition: box-shadow 0.3s ease;
+}
+
+li div:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 .btn-div {
