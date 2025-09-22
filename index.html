@@ -7,161 +7,26 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            background-color: black;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            border: 1px solid white;
-            border-radius: 2em;
-            padding: 1em;
-        }
-
-        ul {
-            list-style-type: none;
-
-        }
-
-        li div {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .btn-div {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .btn-container {
-            width: 50%;
-        }
-
-        .status-btn {
-            border: none;
-            color: white;
-            background-color: rgba(108, 106, 13, 0.7);
-
-        }
-
-        .status-btn:hover {
-            background-color: green;
-            border-radius: 2px;
-
-        }
-
-        .delete-btn {
-            background-color: black;
-            color: white;
-            border-radius: 2px;
-
-        }
-
-        .delete-btn:hover {
-            background-color: rgb(212, 87, 87);
-            color: black;
-        }
-
-
-        #add-todo-btn {
-            background-color: #000000;
-            border: 2px solid wheat;
-            color: aliceblue;
-            width: 8em;
-            height: 3em;
-            font-size: 1em;
-            border-radius: 1em;
-
-            transition: all 0.3s ease;
-            display: none;
-        }
-
-        #add-todo-btn:hover {
-            color: white;
-            box-shadow:
-                0 0 4px white,
-                0 0 8px white,
-                0 0 10px white;
-        }
-
-        #add-todo-form {
-            height: 2.5em;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-
-        }
-
-        #todo-input {
-            background-color: black;
-            border: 1px solid white;
-            color: white;
-            height: 100%;
-            border-radius: 2px;
-        }
-
-        #submit-btn {
-            background-color: black;
-            border: 1px solid wheat;
-            border-radius: 0.75em;
-            color: white;
-            height: 100%;
-        }
-
-        #todo-input:hover {
-            color: white;
-            box-shadow:
-                0 0 2px white,
-                0 0 4px white,
-                0 0 6px white;
-        }
-
-        #submit-btn:hover {
-            color: white;
-            box-shadow:
-                0 0 2px white,
-                0 0 4px white,
-                0 0 6px white;
-        }
-
-        @media (max-width: 768px) {
-
-            /* adjust 768px for your breakpoint */
-            #add-todo-form {
-                flex-direction: column;
-                align-items: center;
-
-            }
-
-            #submit-btn {
-                margin-top: 1em;
-                margin-bottom: 2em;
-                width: 50%;
-            }
-        }
-    </style>
 </head>
-
 <body>
-    <div>
-        <h1>Todo List</h1>
-    </div>
+    <div class="todo-container">
+        <div>
+            <h1>Todo List</h1>
+        </div>
 
-    <div>
-        <ul id="todo-list"></ul>
-    </div>
+        <div>
+            <ul id="todo-list"></ul>
+        </div>
 
-    <div class="btn-container">
-        <button id="add-todo-btn">Add Todo</button>
+        <div class="btn-container">
+            <button id="add-todo-btn">Add Todo</button>
 
-        <div id="add-todo-form">
-            <input type="text" id="todo-input" placeholder="Write a task">
-            <button id="submit-btn">Submit</button>
+            <div id="add-todo-form">
+                <input type="text" id="todo-input" placeholder="Write a task">
+                <button id="submit-btn">Submit</button>
+            </div>
         </div>
     </div>
-
 </body>
 <script src="script.js"></script>
 

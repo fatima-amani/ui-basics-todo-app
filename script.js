@@ -1,37 +1,29 @@
 const addTodo = (item) => {
     const li = document.createElement('li');
-    const div = document.createElement('div'); // main div for task
+    const div = document.createElement('div');
     const p = document.createElement('p');
-    const btnDiv = document.createElement('div'); // container for buttons
+    const btnDiv = document.createElement('div');
     const button = document.createElement('button');
     const deleteBtn = document.createElement('button');
 
-    // Set content
     p.textContent = item;
     button.textContent = "Pending";
     deleteBtn.textContent = "Delete";
-
-    // Add classes
     button.classList.add('status-btn');
     deleteBtn.classList.add('delete-btn');
     btnDiv.classList.add('btn-div');
-
-
-    // Event listeners
     button.addEventListener('click', () => {
         toggleStatus(button);
     });
 
     deleteBtn.addEventListener('click', () => {
-        li.remove(); // Remove the task
+        li.remove();
     });
-
-    // Build structure
     btnDiv.appendChild(button);
     btnDiv.appendChild(deleteBtn);
 
     div.appendChild(p);
-    div.appendChild(btnDiv); // append button container to main div
+    div.appendChild(btnDiv);
     li.appendChild(div);
     ul.appendChild(li);
 };
@@ -54,7 +46,7 @@ const ul = document.getElementById('todo-list')
 
 const addTodoBtn = document.getElementById('add-todo-btn')
 addTodoBtn.addEventListener('click', () => {
-    document.getElementById('add-todo-form').style.display = 'block'
+    document.getElementById('add-todo-form').style.display = 'flex'
     document.getElementById('add-todo-btn').style.display = 'none'
 })
 
@@ -63,6 +55,7 @@ submitbtn.addEventListener('click', () => {
     const todo = document.getElementById('todo-input').value
     if (todo !== "") {
         addTodo(todo)
+        document.getElementById('todo-input').value = ''
     }
 
     document.getElementById('add-todo-form').style.display = 'none'

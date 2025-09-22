@@ -1,3 +1,165 @@
 * {
     font-family: 'Patrick Hand', cursive; 
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 2em;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+.todo-container {
+    border: 1px solid white;
+    border-radius: 2em;
+    padding: 2em;
+    background-color: black;
+    width: 100%;
+    max-width: 600px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+    width: 100%;
+}
+
+li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.3em 0;
+    border: 1px solid #333;
+    border-radius: 0.5em;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.status-btn {
+    border: none;
+    color: white;
+    background-color: rgba(108, 106, 13, 0.7);
+    padding: 0.3em 0.8em;
+    border-radius: 0.3em;
+    margin-right: 0.5em;
+}
+
+.status-btn:hover {
+    background-color: green;
+    border-radius: 2px;
+
+}
+
+.delete-btn {
+    background-color: black;
+    color: white;
+    border-radius: 0.3em;
+    padding: 0.3em 0.8em;
+    border: 1px solid #666;
+}
+
+.delete-btn:hover {
+    background-color: rgb(212, 87, 87);
+    color: black;
+}
+
+
+#add-todo-btn {
+    background-color: #000000;
+    border: 2px solid wheat;
+    color: aliceblue;
+    width: 8em;
+    height: 3em;
+    font-size: 1em;
+    border-radius: 1em;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto 1em auto;
+}
+
+#add-todo-btn:hover {
+    color: white;
+    box-shadow:
+        0 0 4px white,
+        0 0 8px white,
+        0 0 10px white;
+}
+
+#add-todo-form {
+    height: 2.5em;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+#todo-input {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    height: 100%;
+    border-radius: 2px;
+    flex: 1;
+    margin-right: 0.5em;
+    padding: 0 0.5em;
+}
+
+#submit-btn {
+    background-color: black;
+    border: 1px solid wheat;
+    border-radius: 0.75em;
+    color: white;
+    height: 100%;
+    padding: 0 1em;
+    white-space: nowrap;
+}
+
+#todo-input:hover {
+    color: white;
+    box-shadow:
+        0 0 2px white,
+        0 0 4px white,
+        0 0 6px white;
+}
+
+#submit-btn:hover {
+    color: white;
+    box-shadow:
+        0 0 2px white,
+        0 0 4px white,
+        0 0 6px white;
+}
+
+@media (max-width: 768px) {
+    #add-todo-form {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #submit-btn {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        width: 50%;
+    }
+}
